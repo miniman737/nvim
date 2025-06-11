@@ -9,6 +9,7 @@ vim.wo.number = true
 require('packer').startup(function()
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
+  use 'folke/tokyonight.nvim'
 
   -- File traversal
   use {
@@ -95,3 +96,4 @@ map('n', '<leader>e', "<cmd>NvimTreeToggle<cr>", opts)
 
 -- Key mapping to show diagnostics for the current line
 map('n', '<leader>d', "<cmd>lua vim.diagnostic.open_float()<cr>", opts)
+vim.cmd[[colorscheme tokyonight]]
